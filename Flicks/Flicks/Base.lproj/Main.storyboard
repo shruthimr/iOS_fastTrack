@@ -126,10 +126,10 @@
                                 <color key="textColor" red="1" green="0.61642492370000002" blue="0.25722573739999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2w-KT-px5">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2w-KT-px5">
                                 <rect key="frame" x="41" y="375" width="299" height="292"/>
                                 <subviews>
-                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydK-3l-XSW" userLabel="Scroll Content View">
+                                    <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydK-3l-XSW" userLabel="Scroll Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="400"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryF-ut-9L1">
@@ -173,6 +173,7 @@
                     <connections>
                         <outlet property="backdropImageView" destination="VBd-He-i0g" id="1dK-qB-hwy"/>
                         <outlet property="infoScrollView" destination="t2w-KT-px5" id="Am0-jf-QC3"/>
+                        <outlet property="scrollContentView" destination="ydK-3l-XSW" id="kcm-Ie-dYz"/>
                         <outlet property="summaryLabel" destination="3WX-jp-ORW" id="yml-vT-ljv"/>
                         <outlet property="titleLabel" destination="ryF-ut-9L1" id="cFu-6t-lhE"/>
                     </connections>
