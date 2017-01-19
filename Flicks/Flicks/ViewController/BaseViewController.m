@@ -141,10 +141,10 @@
 
 }
 
-- (NSIndexPath*)collectionView:(UICollectionView *)collectionView willSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+- (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath;
 {
     self.selectedPath = indexPath;
-    [self performSegueWithIdentifier:@"Details" sender:self];
-    return  indexPath;
+//    [self performSegueWithIdentifier:@"Details" sender:self];
+    return;
 }
 @end
