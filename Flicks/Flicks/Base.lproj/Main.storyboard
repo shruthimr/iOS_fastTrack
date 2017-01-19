@@ -22,6 +22,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2AX-jM-8vr">
+                                <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.61642492370000002" blue="0.25722573739999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gC3-0D-UJo">
+                                    <size key="itemSize" width="71" height="71"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridCell" id="8Pm-cv-xdT" customClass="MovieGridCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQg-mn-5T3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhR-zN-PtK">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="FsX-ip-TpT"/>
+                                                                <constraint firstAttribute="height" constant="100" id="yme-DO-EPY"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="Zpz-tI-kmv"/>
+                                                        <constraint firstItem="hhR-zN-PtK" firstAttribute="top" secondItem="hQg-mn-5T3" secondAttribute="top" id="lWQ-2Q-mJr"/>
+                                                        <constraint firstAttribute="height" constant="100" id="p7L-x0-NU3"/>
+                                                        <constraint firstItem="hhR-zN-PtK" firstAttribute="leading" secondItem="hQg-mn-5T3" secondAttribute="leading" id="zYI-OG-6Gg"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.8293269231" green="0.6359174917" blue="0.074475840700000004" alpha="0.86826508619999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="hQg-mn-5T3" firstAttribute="top" secondItem="8Pm-cv-xdT" secondAttribute="top" id="Erf-zd-6sB"/>
+                                            <constraint firstItem="hQg-mn-5T3" firstAttribute="leading" secondItem="8Pm-cv-xdT" secondAttribute="leading" id="pAh-8z-usr"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="gridPosterView" destination="hhR-zN-PtK" id="KfD-Ii-mdc"/>
+                                            <segue destination="3bq-y8-x0D" kind="showDetail" identifier="Details" id="MIR-vf-EHj"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="215" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NxX-HW-2gY">
                                 <rect key="frame" x="0.0" y="1" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -81,8 +132,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="FLICKS" id="Y25-FK-1iB"/>
+                    <navigationItem key="navigationItem" title="FLICKS" id="Y25-FK-1iB">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="fDo-Df-ysF">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="c8V-md-6H4">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="" image="list-icon.png"/>
+                                    <segment title="" image="grid-icon.png"/>
+                                </segments>
+                            </segmentedControl>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="2AX-jM-8vr" id="jd1-v0-a6M"/>
+                        <outlet property="layoutControl" destination="c8V-md-6H4" id="QKV-uP-rsU"/>
                         <outlet property="moviesTableView" destination="NxX-HW-2gY" id="BZB-fO-Kam"/>
                     </connections>
                 </viewController>
@@ -194,6 +258,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hAg-pz-eow">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.61642492370000002" blue="0.25722573739999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qJx-m1-hTo">
+                                    <size key="itemSize" width="71" height="71"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridCell" id="yGj-Ry-Jsw" customClass="MovieGridCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySo-iS-OQs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FtI-nZ-OSL">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="Fve-Fi-FpK"/>
+                                                                <constraint firstAttribute="height" constant="100" id="fOg-vH-6vc"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="FtI-nZ-OSL" firstAttribute="leading" secondItem="ySo-iS-OQs" secondAttribute="leading" id="NoO-Tf-0CE"/>
+                                                        <constraint firstAttribute="height" constant="100" id="VOz-9o-8mZ"/>
+                                                        <constraint firstAttribute="width" constant="100" id="bgV-Gl-ljZ"/>
+                                                        <constraint firstItem="FtI-nZ-OSL" firstAttribute="top" secondItem="ySo-iS-OQs" secondAttribute="top" id="hic-fd-kUP"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.8293269231" green="0.6359174917" blue="0.074475840700000004" alpha="0.86826508619999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="ySo-iS-OQs" firstAttribute="leading" secondItem="yGj-Ry-Jsw" secondAttribute="leading" id="Jt7-qC-2rq"/>
+                                            <constraint firstItem="ySo-iS-OQs" firstAttribute="top" secondItem="yGj-Ry-Jsw" secondAttribute="top" id="XZR-q5-zjH"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="gridPosterView" destination="FtI-nZ-OSL" id="ruz-j1-XWY"/>
+                                            <segue destination="3bq-y8-x0D" kind="showDetail" identifier="Details" id="eoi-mD-0V7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="222" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qQu-e4-yCB">
                                 <rect key="frame" x="0.0" y="-3" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -253,8 +368,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="FLICKS" id="wwg-uh-sqW"/>
+                    <navigationItem key="navigationItem" title="FLICKS" id="wwg-uh-sqW">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="dJN-Mc-zcg">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="trw-iM-8lg">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="" image="list-icon.png"/>
+                                    <segment title="" image="grid-icon.png"/>
+                                </segments>
+                            </segmentedControl>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="hAg-pz-eow" id="DwH-Fi-dpi"/>
+                        <outlet property="layoutControl" destination="trw-iM-8lg" id="iNX-sc-3cc"/>
                         <outlet property="moviesTableView" destination="qQu-e4-yCB" id="Blh-0x-EDd"/>
                     </connections>
                 </viewController>
@@ -330,11 +458,13 @@
     </scenes>
     <resources>
         <image name="br_prev_icon&amp;24.png" width="24" height="24"/>
+        <image name="grid-icon.png" width="54" height="42"/>
+        <image name="list-icon.png" width="54" height="42"/>
         <image name="playback_play_icon&amp;32.png" width="32" height="32"/>
         <image name="star_fav_icon&amp;32.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eTA-qg-ZlI"/>
+        <segue reference="eoi-mD-0V7"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.61642492370000002" blue="0.25722573739999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>

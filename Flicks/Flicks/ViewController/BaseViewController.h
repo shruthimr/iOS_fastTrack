@@ -15,7 +15,10 @@
 #import "UIImageView+AFNetworking.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 
-@interface BaseViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface BaseViewController : UIViewController<UITableViewDelegate,UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
 @property (strong, nonatomic) NSArray<MovieItem*>* movieArray;
 @property (strong,nonatomic) UIRefreshControl* refreshControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *layoutControl;
+@property (weak, nonatomic) IBOutlet UITableView *moviesTableView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end

@@ -11,7 +11,7 @@
 
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *moviesTableView;
+
 @end
 
 @implementation ViewController

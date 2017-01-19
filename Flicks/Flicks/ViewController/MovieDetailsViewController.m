@@ -37,11 +37,11 @@
     self.summaryLabel.text = self.movie.overview;
     self.summaryLabel.numberOfLines = 20;
     [self.summaryLabel sizeToFit];
-    self.summaryLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.summaryLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     CGSize summaryLabelSize = self.summaryLabel.frame.size;
 
     self.scrollContentView.layer.cornerRadius = 3.0f;
-//    [self.infoScrollView setContentSize:CGSizeMake(summaryLabelSize.width, titleLabelSize.height + summaryLabelSize.height + 50)];
+    [self.infoScrollView setContentSize:CGSizeMake(summaryLabelSize.width, titleLabelSize.height + summaryLabelSize.height +25)];
 }
 
 

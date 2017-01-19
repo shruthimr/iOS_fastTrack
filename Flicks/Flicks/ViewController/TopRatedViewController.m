@@ -12,15 +12,14 @@
 
 @interface TopRatedViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *moviesTableView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
 @implementation TopRatedViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.moviesTableView.delegate = self;
-    self.moviesTableView.dataSource = self;
+    
     //    [self.moviesTableView registerClass:MovieCell.self forCellReuseIdentifier:@"movieCell"]; //Not required on storyboard cells
     self.refreshControl = [UIRefreshControl new];
     [self.refreshControl addTarget:self action:@selector(loadMovies) forControlEvents:UIControlEventValueChanged];

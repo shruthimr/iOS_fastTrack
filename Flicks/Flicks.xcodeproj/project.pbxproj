@@ -11,6 +11,9 @@
 		091761981E298C1D00BCB593 /* MovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091761971E298C1D00BCB593 /* MovieDetailsViewController.m */; };
 		0945F6931E2F7D0100855145 /* br_prev_icon&32.png in Resources */ = {isa = PBXBuildFile; fileRef = 0945F6921E2F7D0100855145 /* br_prev_icon&32.png */; };
 		0945F6951E2F7D3D00855145 /* br_prev_icon&24.png in Resources */ = {isa = PBXBuildFile; fileRef = 0945F6941E2F7D3D00855145 /* br_prev_icon&24.png */; };
+		0945F6971E303CAA00855145 /* grid-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0945F6961E303CAA00855145 /* grid-icon.png */; };
+		0945F6991E303CB200855145 /* list-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0945F6981E303CB200855145 /* list-icon.png */; };
+		0945F69C1E303EE500855145 /* MovieGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0945F69B1E303EE500855145 /* MovieGridCell.m */; };
 		095854E31E2F63F40055E499 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 095854E21E2F63F40055E499 /* BaseViewController.m */; };
 		095854E61E2F6CC30055E499 /* TopRatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 095854E51E2F6CC30055E499 /* TopRatedViewController.m */; };
 		095854E81E2F79120055E499 /* star_fav_icon&32.png in Resources */ = {isa = PBXBuildFile; fileRef = 095854E71E2F79120055E499 /* star_fav_icon&32.png */; };
@@ -33,6 +36,10 @@
 		091761971E298C1D00BCB593 /* MovieDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieDetailsViewController.m; path = ViewController/MovieDetailsViewController.m; sourceTree = "<group>"; };
 		0945F6921E2F7D0100855145 /* br_prev_icon&32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "br_prev_icon&32.png"; sourceTree = "<group>"; };
 		0945F6941E2F7D3D00855145 /* br_prev_icon&24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "br_prev_icon&24.png"; sourceTree = "<group>"; };
+		0945F6961E303CAA00855145 /* grid-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grid-icon.png"; sourceTree = "<group>"; };
+		0945F6981E303CB200855145 /* list-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-icon.png"; sourceTree = "<group>"; };
+		0945F69A1E303EE500855145 /* MovieGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieGridCell.h; path = Views/MovieGridCell.h; sourceTree = "<group>"; };
+		0945F69B1E303EE500855145 /* MovieGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieGridCell.m; path = Views/MovieGridCell.m; sourceTree = "<group>"; };
 		095854E11E2F63F40055E499 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = ViewController/BaseViewController.h; sourceTree = "<group>"; };
 		095854E21E2F63F40055E499 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = ViewController/BaseViewController.m; sourceTree = "<group>"; };
 		095854E41E2F6CC30055E499 /* TopRatedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopRatedViewController.h; path = ViewController/TopRatedViewController.h; sourceTree = "<group>"; };
@@ -95,6 +102,8 @@
 			children = (
 				09AD77121E28B23E000613AA /* MovieCell.h */,
 				09AD77131E28B23E000613AA /* MovieCell.m */,
+				0945F69A1E303EE500855145 /* MovieGridCell.h */,
+				0945F69B1E303EE500855145 /* MovieGridCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -153,6 +162,8 @@
 		09FD06DE1E280BF80006D867 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0945F6981E303CB200855145 /* list-icon.png */,
+				0945F6961E303CAA00855145 /* grid-icon.png */,
 				0945F6921E2F7D0100855145 /* br_prev_icon&32.png */,
 				0945F6941E2F7D3D00855145 /* br_prev_icon&24.png */,
 				095854E91E2F792D0055E499 /* playback_play_icon&32.png */,
@@ -246,9 +257,11 @@
 				09FD06EB1E280BF80006D867 /* Assets.xcassets in Resources */,
 				0945F6951E2F7D3D00855145 /* br_prev_icon&24.png in Resources */,
 				095854E81E2F79120055E499 /* star_fav_icon&32.png in Resources */,
+				0945F6991E303CB200855145 /* list-icon.png in Resources */,
 				095854EA1E2F792D0055E499 /* playback_play_icon&32.png in Resources */,
 				09FD06E91E280BF80006D867 /* Main.storyboard in Resources */,
 				0945F6931E2F7D0100855145 /* br_prev_icon&32.png in Resources */,
+				0945F6971E303CAA00855145 /* grid-icon.png in Resources */,
 				091761931E29799A00BCB593 /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +327,7 @@
 				095854E61E2F6CC30055E499 /* TopRatedViewController.m in Sources */,
 				09FD06E31E280BF80006D867 /* AppDelegate.m in Sources */,
 				091761981E298C1D00BCB593 /* MovieDetailsViewController.m in Sources */,
+				0945F69C1E303EE500855145 /* MovieGridCell.m in Sources */,
 				09AD77141E28B23E000613AA /* MovieCell.m in Sources */,
 				09AD77051E281861000613AA /* MovieItem.m in Sources */,
 				09FD06E01E280BF80006D867 /* main.m in Sources */,
